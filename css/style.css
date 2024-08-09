@@ -1,0 +1,956 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+/* CSS variables*/
+:root {
+    --playfair-display: "Playfair Display", serif;
+    --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+
+    --primary-color: #b1454a;
+    --secondary-color: #121212;
+
+    --black-200: #020202;
+    --black-300: #333333;
+    --black-400: #1f1e31;
+    --black-500: #555555;
+    --gray-100: #888888;
+
+    --color-white: #fff;
+    --color-creamson: #fff0de;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-creamson);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+img {
+    object-fit: contain;
+}
+
+.container {
+    min-width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ====================== Header Section Css Starts  ======================*/
+#header {
+    position: absolute;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 99999;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo h4 {
+    padding-left: 30px;
+
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: var(--playfair-display);
+    color: #fff;
+    opacity: 0.8;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__menu li {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: solid 2px transparent;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+
+.header__menu li:hover:not(:last-child) {
+    border-bottom: solid 2px #000;
+}
+
+
+/* ====================== Header Section Css Ends ====================== */
+
+/* ====================== Call to Action Section Css Starts  ======================*/
+.cta__section {
+    display: flex;
+    height: 100vh;
+    min-height: 820px;
+}
+
+.cta__image {
+    flex: 1;
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 20px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.cta__image img {
+    width: 120%;
+}
+
+.cta__image h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1;
+
+    font-family: var(--playfair-display);
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 138px;
+    color: #fff;
+}
+
+.cta__content {
+    flex: 1;
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: center;
+}
+
+.cta__content-info {
+    padding: 64px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cta__content-info h1 {
+    font-size: 80px;
+    font-weight: 600px;
+    font-family: var(--playfair-display);
+    color: var(--secondary-color);
+}
+
+.cta__content-info p {
+    margin-top: 30px;
+
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.cta__content-btns {
+    margin: 41px 0 0 41px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    justify-content: center;
+}
+
+.cta__content-order-btn {
+    padding: 20px;
+    border-radius: 36px;
+    min-width: 40%;
+    outline: none;
+    border: none;
+    background: var(--secondary-color);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    border: solid 3px transparent;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.cta__content-order-btn:hover {
+    border-color: var(--secondary-color);
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.cta__content-play-btn {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--black-200);
+    font-family: var(--plus-jakarta-sans);
+
+    cursor: pointer;
+}
+
+.cta__content-play-btn img {
+    margin-right: 12px;
+
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.cta__content-testimonial {
+    padding: 32px 64px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    background: var(--color-white)
+}
+
+.cta__content-customer {
+    flex: 1;
+    gap: 10px;
+}
+
+.cta__content-customer h4 {
+    font-size: 62px;
+    font-weight: 400;
+    font-family: var(--playfair-display)
+}
+
+.cta__content-customer p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    opacity: 0.5;
+}
+
+.cta__content-review {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding-left: 20px;
+    border-left: 1px solid rgba(2, 2, 2, 0.1);
+    min-width: 200px;
+}
+
+.cta__content-review img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.cta__content-review p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 32px;
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    opacity: 0.8
+}
+
+/* ====================== Call to Action Section Css Ends ====================== */
+
+/* ====================== About US Section Css Starts  ======================*/
+.aboutUs__section {
+    display: flex;
+}
+
+.aboutUs__image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    position: relative;
+    background: var(--color-white);
+}
+
+.aboutUs__image img {
+    width: 250px;
+}
+
+.aboutUs__image div {
+    padding: 84px 64px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.aboutUs__image1 {
+    background-image: url("../assets/about_bg1.png");
+    border-bottom: 8px solid var(--color-creamson);
+}
+
+.aboutUs__image2 {
+    background-image: url("../assets/about_bg2.png");
+
+}
+
+.aboutUs__image .aboutUs__btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 12px 32px;
+    min-height: 64px;
+    background: var(--secondary-color);
+    border-radius: 32px 0 0 32px;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-family: var(--plus-jakarta-sans);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    cursor: pointer;
+    -webkit-border-radius: 32px 0 0 32px;
+    -moz-border-radius: 32px 0 0 32px;
+    -ms-border-radius: 32px 0 0 32px;
+    -o-border-radius: 32px 0 0 32px;
+}
+
+.aboutUs__image .aboutUs__btn img {
+    width: 12px;
+    margin-left: 8px;
+}
+
+.aboutUs__content {
+    flex: 1;
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sushi__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--plus-jakarta-sans);
+
+    color: var(--primary-color);
+    opacity: 0.8;
+
+    letter-spacing: -0.01em;
+}
+
+.sushi__title {
+    font-size: 64px;
+    font-weight: 600;
+    font-family: var(--playfair-display);
+
+    color: var(--secondary-color);
+
+    margin-top: 16px;
+}
+
+.sushi__description {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--plus-jakarta-sans);
+
+    line-height: 36px;
+    letter-spacing: -0.01em;
+
+    color: var(--secondary-color);
+    opacity: 0.8;
+
+    margin: 32px 0px;
+}
+
+/* ====================== About US Section Css Ends ====================== */
+
+/* ====================== Popular Foods Section Css Starts  ======================*/
+.popularFoods__section {
+    padding: 64px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+
+    background-color: var(--primary-color);
+    background-image: url("../assets/popular_bg.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    overflow: hidden;
+}
+
+.popularFoods__title {
+    font-size: 56px;
+    font-family: var(--playfair-display);
+    font-weight: 600;
+    line-height: 78px;
+    color: #fff;
+    text-align: center;
+}
+
+.popularFoods__filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.popularFoods__filter-btn {
+    padding: 10px 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 46px;
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 25px;
+    font-family: var(--plus-jakarta-sans);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.popularFoods__filter-btn img {
+    width: 20px;
+}
+
+.popularFoods__filter-btn.active {
+    background: #fff;
+    color: var(--primary-color)
+}
+
+.popularFoods__filter-btn:hover {
+    background: #ffffff92;
+    color: var(--primary-color)
+}
+
+.popularFoods__catalogue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 60px;
+    margin: 0 5%;
+}
+
+.popularFoods__card {
+    padding: 38px;
+    height: 340px;
+    width: 28%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    transition: background-color 1s ease-in-out;
+    -webkit-transition: background-color 1s ease-in-out;
+    -moz-transition: background-color 1s ease-in-out;
+    -ms-transition: background-color 1s ease-in-out;
+    -o-transition: background-color 1s ease-in-out;
+}
+
+.popularFoods__card * {
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
+
+.popularFoods__card .popularFoods__card-image {
+    width: 50%;
+}
+
+.popularFoods__card-title {
+    margin-top: 47px;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: var(--playfair-display);
+    color: #fff;
+    text-align: center;
+}
+
+.popularFoods__card-details {
+    width: 100%;
+    margin-top: 32px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.popularFoods__card-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.popularFoods__card-rating img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.popularFoods__card-rating p {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: var(--plus-jakarta-sans);
+    color: #fff;
+}
+
+.popularFoods__card-price {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    color: #fff;
+}
+
+.popularFoods__card:hover {
+    background: #fff;
+}
+
+.popularFoods__card:hover .popularFoods__card-image {
+    width: 60%;
+}
+
+.popularFoods__card:hover .popularFoods__card-title {
+    color: var(--black-500);
+    font-size: 28px;
+}
+
+.popularFoods__card:hover .popularFoods__card-rating img {
+    width: 28px;
+    height: 28px;
+}
+
+.popularFoods__card:hover .popularFoods__card-rating p {
+    font-size: 22px;
+    color: var(--gray-100);
+}
+
+.popularFoods__card:hover .popularFoods__card-price {
+    font-size: 22px;
+    color: var(--secondary-color)
+}
+
+.popularFoods__btn {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    margin: 40px auto 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: var(--plus-jakarta-sans);
+    color: #fff;
+    border: 3px solid transparent;
+    background: var(--secondary-color);
+    border-radius: 64px;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+.popularFoods__btn:hover {
+    border-color: hsla(0, 0%, 100%, 0.5);
+    background-color: transparent;
+}
+
+.popularFoods__btn img {
+    width: 20px;
+    margin-left: 8px;
+}
+
+/* ====================== Popular Foods Section Css Ends ====================== */
+
+/* ====================== Trending Section Css Starts  ======================*/
+.trending__section {
+    position: relative;
+}
+
+.trending__section::before {
+    content: 'Discover';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999999;
+    margin-left: -80px;
+    margin-top: -80px;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.trending__row {
+    display: flex;
+    justify-content: stretch;
+}
+
+.trending__row>div {
+    height: 640px;
+    position: relative;
+    padding: 0 60px;
+
+    flex: 1;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trending__image {
+    align-items: center;
+
+    background-color: var(--color-white);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    background-image: url("../assets/japanese_sushi.png");
+}
+
+.trending__image img {
+    width: 250px;
+}
+
+.trending__list {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.trending__list li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+
+    min-width: 210px;
+}
+
+.trending__icon {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 100%;
+    background-color: var(--primary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trending__icon img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.trending__list p {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+
+    color: var(--secondary-color);
+}
+
+.trending__image1::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    width: 20px;
+    background-image: url(../assets/arrow-vertical.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    z-index: 999;
+}
+
+.trending__image1::after {
+    content: '';
+    position: absolute;
+    bottom: -250px;
+    right: 280px;
+    width: 20px;
+    background-image: url(../assets/arrow-vertical.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    z-index: 999;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.trending__image2::before {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    right: -10px;
+    width: 20px;
+    background-image: url(../assets/arrow-vertical.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    z-index: 999;
+}
+
+.trending__image2::after {
+    content: '';
+    position: absolute;
+    top: -250px;
+    left: 280px;
+    width: 20px;
+    background-image: url(../assets/arrow-vertical.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    z-index: 999;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+/* ====================== Trending Section Css Ends ====================== */
+
+/* ====================== Subscription Section Css Starts  ======================*/
+.subscription__section {
+    padding: 64px;
+
+    background-color: var(--primary-color);
+    background-image: url("../assets/subscribe_bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+
+.subscription__section h2 {
+    font-size: 88px;
+    font-family: var(--playfair-display);
+    font-weight: 600;
+    line-height: 123px;
+    color: #fff;
+}
+
+.subscription__section p {
+    font-size: 18px;
+    font-family: var(--plus-jakarta-sans);
+    font-weight: 300;
+    line-height: 36px;
+
+    margin-top: 32px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.subscription__form {
+    display: inline-block !important;
+    min-width: 40%;
+    margin-top: 40px;
+
+    padding: 14px 14px 14px 24px;
+
+    display: flex;
+    gap: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 46px;
+}
+
+.subscription__form input {
+    flex: 1;
+
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: var(--plus-jakarta-sans);
+
+    color: #fff;
+    opacity: 0.5;
+
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.subscription__form input::placeholder {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.subscription__form button {
+    padding: 20px;
+
+    min-width: 180px;
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    color: #fff;
+    text-align: center;
+
+    background: var(--black-400);
+    border-radius: 46px;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+}
+
+/* ====================== Subscription Section Css Ends ====================== */
+
+/* ====================== Footer Section Css Starts  ======================*/
+#footer {
+    width: 100%;
+    padding: 20px 40px;
+    background: var(--color-white);
+
+}
+.footer__section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    overflow: hidden;
+}
+.footer__logo {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--playfair-display);
+    text-transform: uppercase;
+    color: var(--secondary-color);
+
+    cursor: pointer;
+}
+
+.footer__logo span {
+    color: var(--primary-color)
+}
+
+.footer__section ul {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+.footer ul:last-child {
+    gap: 32px;
+}
+.footer__nav{
+    flex: 2 !important;
+}
+.footer__nav li {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    text-transform: uppercase;
+    color: var(--secondary-color);
+
+}
+
+.footer__social li a{
+    width: 42px;
+    height: 42px;
+
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__social li img {
+    width: 45%;
+    height: 45%;
+    object-fit: contain;
+}
+
+/* ====================== Footer Section Css Ends ====================== */
