@@ -1,0 +1,142 @@
+@media screen and (max-width: 1280px) {
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    #header {
+        background: var(--primary-color);
+        padding: 0 60px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__menu-mobile {
+        display: flex;
+    }
+
+    .header__logo h4 {
+        padding-left: 0;
+    }
+
+    .cta__section {
+        flex-direction: column;
+        height: max-content;
+        overflow: hidden;
+    }
+
+    .cta__image {
+        align-items: center;
+    }
+
+    .cta__image img {
+        margin-top: -20px;
+        height: calc(100vh - 50px);
+        transform: matrix(1, 0.05, 0, 1.25, 0, 0) !important;
+    }
+
+    .cta__content {
+        padding-top: 0;
+    }
+
+    .popularFoods__catalogue {
+        gap: 30px;
+    }
+
+    .sushi__description {
+        line-height: 1;
+        margin: 20px 0 35px 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #header {
+        padding: 0 30px;
+    }
+    .aboutUs__section{
+        flex-direction: column-reverse;
+    }
+    .aboutUs__content {
+        text-align: center;
+    }
+    .popularFoods__card-details{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .cta__image h2 {
+        font-size: 70px;
+        line-height: 90px;
+    }
+    .trending__row{
+        display: block;
+    }
+    .trending__row>div {
+       height: 550px;
+       text-align: center;
+    }
+    .trending__list{
+        justify-content: center;
+    }
+    .trending__list  li{
+        flex: 0;
+    }
+    .trending__image1::before{
+        display: none;
+    }
+    .trending__image2::before{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .cta__image h2 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .cta__content-info {
+        padding: 32px;
+    }
+
+    .cta__content-info h1 {
+        font-size: 60px;
+    }
+
+    .cta__content-info p {
+        margin: 32px 0;
+    }
+
+    .cta__content-btns {
+        margin: 0;
+    }
+
+    .cta__content__testimonial {
+        padding: 32px;
+    }
+    .trending__row>div{
+        height: fit-content;
+        padding: 100px 20px;
+    }
+    .trending__image1::after{
+        display: none;
+    }
+    .trending__image2::after{
+        display: none;
+    }
+    .trending__section::before{
+        display: none;
+    }
+    .trending__image1 {
+        border-bottom: 2px dashed var(--secondary-color);
+    }
+}
+@media screen and (max-width: 700px){
+    .footer__section{
+        text-align: center;
+    }
+}
